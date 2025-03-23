@@ -1,0 +1,111 @@
+
+  /* ---- SECTION MENU ---- */
+  #menu {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow: auto;
+    margin-top: -50px;
+    padding-bottom: 100px;
+  }
+  
+  /* ---- TITRE PRINCIPAL ---- */
+  .menu-title {
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #e63946;
+    text-transform: uppercase;
+  }
+  
+  /* ---- CONTAINER MENU ---- */
+  .menu-container {
+    background: #161515ac;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 3px 3px 10px rgb(255, 255, 255);
+    border: 2px solid #e7e3e3;
+    overflow: hidden;
+    padding: 60px;
+  }
+  
+  /* ---- CATÉGORIE ---- */
+  .category-title {
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color: #e63946;
+    padding-bottom: 5px;
+    margin: 10px 0;
+  }
+
+  .category-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;  /* Ligne invisible au départ */
+    height: 3px;
+    background: #e63946;
+    transition: width 1s ease-out; /* Animation */
+}
+
+/* Quand l'élément est visible, la ligne s'étire */
+.category-title.visible::after {
+    width: 100%;
+}
+  
+  /* ---- LISTE DES PLATS ---- */
+  .menu-list {
+    list-style: none;
+    padding: 15px;
+  }
+
+  /* ---- STYLE D'UN PLAT ---- */
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px dashed white;
+  }
+  .menu-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ede5e5;
+  }
+  
+  .menu-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e63946;
+    text-align: right;
+  }
+  
+  .menu-description {
+    font-size: 17px;
+    color: #eaf0f0;
+  }
+
+  .menu-logo {
+    text-align: center; /* Centre le logo */
+    margin-top: -15%; /* Ajoute un espace après le menu */
+  }
+  
+  .menu-logo img {
+    width: 120px; /* Taille du logo */
+    opacity: 0.8; /* Légère transparence pour un effet épuré */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .menu-logo img:hover {
+    opacity: 2; /* Augmente l'opacité au survol */
+  }
+
+  @media screen and (max-width: 800px) {
+    .menu-logo {
+      opacity: 0;
+    }
+  }

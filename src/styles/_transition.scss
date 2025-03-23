@@ -1,0 +1,54 @@
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .groupline {
+    gap: 30px; /* Espacement entre les lignes */
+    width: 100%; /* S'étend sur toute la largeur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -200px;
+  }
+  
+  .line1,
+  .line2,
+  .line3 {
+    width: 0%; /* Elles commencent invisibles */
+    height: 2px;
+    transition: width 1.5s ease-in-out;
+  }
+  
+  .line1 {
+    background-color: #e63946;
+  }
+  .line2 {
+    background-color: rgb(225, 215, 215);
+  }
+  .line3 {
+    background-color: #e63946;
+  }
+  
+  /* Une fois visible, les lignes s'étendent */
+  .info.visible .line1 {
+    width: 80%;
+  }
+  .info.visible .line2 {
+    width: 65%;
+  }
+  .info.visible .line3 {
+    width: 50%; /* Largeur finale */
+  }
+  
+  /* Délais progressifs pour un effet dynamique */
+  .info.visible .line1 {
+    transition-delay: 0.3s;
+  }
+  .info.visible .line2 {
+    transition-delay: 0.5s;
+  }
+  .info.visible .line3 {
+    transition-delay: 0.7s;
+  }

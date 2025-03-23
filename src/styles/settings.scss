@@ -1,0 +1,33 @@
+@import url(./_home.scss);
+@import url(./_nav.scss);
+@import url(./_story.scss);
+@import url(./_menu.scss);
+@import url(./_transition.scss);
+@import url(./_contact.scss);
+
+
+html, body {
+    background-color: rgb(36, 35, 35) ;
+    height: auto; /* Permet d'étendre la page si besoin */
+    overflow-y: auto; /* Ajoute un défilement vertical */
+  }
+  
+  /* Bouton */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e63946; /* Rouge chaleureux */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* Effet au survol */
+  .btn:hover {
+    background-color: #b02a37; /* Rouge plus foncé */
+    transform: scale(1.1);
+  }
+  
+  
